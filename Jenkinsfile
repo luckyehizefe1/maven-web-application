@@ -4,10 +4,10 @@ pipeline{
     maven "maven3.6.0"
   }  
   stages {
-    stage('1GetCode'){
+    stage('1cloneCode'){
       steps{
         sh "echo 'cloning the latest application version' "
-        git branch: 'feature', credentialsId: 'gitHubCredentials', url: 'https://github.com/LandmakTechnology/maven-web-application'
+        git branch: 'feature', credentialsId: 'gitHubCredentials', url: 'https://github.com/luckyehizefe1/maven-web-application'
       }
     }
     stage('3Test+Build'){
